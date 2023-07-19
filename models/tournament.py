@@ -3,8 +3,9 @@ class Tournament:
                 place, 
                 start, 
                 end, 
-                round_number, 
-                number_of_round=4
+                round_number,
+                players,
+                number_of_rounds=4
                 ):
         
         self.name = name
@@ -12,8 +13,8 @@ class Tournament:
         self.start = start
         self.end = end
         self.round_number = round_number
-        self.number_of_round = number_of_round
-        self.players = []
+        self.players = players
+        self.number_of_rounds = number_of_rounds
         self.rounds = []
         
         
@@ -21,12 +22,12 @@ class Tournament:
     def __str__(self):
         players_infos = "\n".join([str(player) for player in self.players])
         return (
-            f"Nom du tournoi: {self.name}"
-            f"Lieu du tournoi: {self.place}"
-            f"Début du tournoi: {self.start}"
-            f"Fin du tournoi: {self.end}"
-            f"Round n°: {self.round_number}"
-            f"Nombre de tours: {self.number_of_round}"
-            f"Liste des joueurs inscrits: {players_infos}"
+            f"Nom du tournoi: {self.name}\n"
+            f"Lieu du tournoi: {self.place}\n"
+            f"Début du tournoi: {self.start}\n"
+            f"Fin du tournoi: {self.end}\n"
+            f"Round n°: {self.round_number}\n"
+            f"Nombre de tours: {self.number_of_rounds}\n"
+            f"Liste des joueurs inscrits: {players_infos}\n"
             f"Liste des tours: {self.rounds}"
         )

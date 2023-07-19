@@ -6,6 +6,9 @@ from models.player import Player
 from controllers.json_function import writeJson
 
 def PlayersForCompetition():
+    """
+    Function to add all the players from club at competition list of players.
+    """
     players = []
     print("Merci d'inscrire les joueurs à la compétition annuelle:")
     number_of_players = int(input("Combien de joueurs souhaitez-vous inscrire ? "))

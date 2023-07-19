@@ -8,7 +8,7 @@ class Player:
     def win_game(self):
         self.score += 1
         
-    def lose_game(self):
+    def loose_game(self):
         self.score -= 1
         
     def draw(self):
