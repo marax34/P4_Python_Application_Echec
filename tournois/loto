@@ -1,0 +1,212 @@
+{
+    "Nom": "loto",
+    "Lieu du tournoi": "efbfe",
+    "Debut du tournoi": "befbb",
+    "Fin du tournoi": "bfbbf",
+    "Round en cours": 1,
+    "Nombre de rounds": 3,
+    "Joueurs inscrits": [
+        {
+            "Nom: ": "a",
+            "Prenom: ": "a",
+            "Age: ": 10,
+            "Score: ": 3
+        },
+        {
+            "Nom: ": "b",
+            "Prenom: ": "b",
+            "Age: ": 11,
+            "Score: ": -1
+        },
+        {
+            "Nom: ": "d",
+            "Prenom: ": "d",
+            "Age: ": 13,
+            "Score: ": 0.5
+        },
+        {
+            "Nom: ": "e",
+            "Prenom: ": "e",
+            "Age: ": 14,
+            "Score: ": -1.5
+        },
+        {
+            "Nom: ": "f",
+            "Prenom: ": "f",
+            "Age: ": 15,
+            "Score: ": 0
+        }
+    ],
+    "Classement des joueurs": [
+        {
+            "Nom: ": "a",
+            "Prenom: ": "a",
+            "Age: ": 10,
+            "Score: ": 3
+        },
+        {
+            "Nom: ": "d",
+            "Prenom: ": "d",
+            "Age: ": 13,
+            "Score: ": 0.5
+        },
+        {
+            "Nom: ": "f",
+            "Prenom: ": "f",
+            "Age: ": 15,
+            "Score: ": 0
+        },
+        {
+            "Nom: ": "b",
+            "Prenom: ": "b",
+            "Age: ": 11,
+            "Score: ": -1
+        },
+        {
+            "Nom: ": "e",
+            "Prenom: ": "e",
+            "Age: ": 14,
+            "Score: ": -1.5
+        }
+    ],
+    "Rounds Infos": [
+        {
+            "Roundmatchs": [
+                {
+                    "player_1": {
+                        "Nom: ": "d",
+                        "Prenom: ": "d",
+                        "Age: ": 13,
+                        "Score: ": 0.5
+                    },
+                    "player_2": {
+                        "Nom: ": "e",
+                        "Prenom: ": "e",
+                        "Age: ": 14,
+                        "Score: ": -1.5
+                    }
+                },
+                {
+                    "player_1": {
+                        "Nom: ": "b",
+                        "Prenom: ": "b",
+                        "Age: ": 11,
+                        "Score: ": -1
+                    },
+                    "player_2": {
+                        "Nom: ": "a",
+                        "Prenom: ": "a",
+                        "Age: ": 10,
+                        "Score: ": 3
+                    }
+                },
+                {
+                    "player_1": {
+                        "Nom: ": "f",
+                        "Prenom: ": "f",
+                        "Age: ": 15,
+                        "Score: ": 0
+                    },
+                    "player_2": {
+                        "Nom: ": "BOT",
+                        "Prenom: ": "",
+                        "Age: ": 0,
+                        "Score: ": 0
+                    }
+                }
+            ]
+        },
+        {
+            "Roundmatchs": [
+                {
+                    "player_1": {
+                        "Nom: ": "a",
+                        "Prenom: ": "a",
+                        "Age: ": 10,
+                        "Score: ": 3
+                    },
+                    "player_2": {
+                        "Nom: ": "d",
+                        "Prenom: ": "d",
+                        "Age: ": 13,
+                        "Score: ": 0.5
+                    }
+                },
+                {
+                    "player_1": {
+                        "Nom: ": "e",
+                        "Prenom: ": "e",
+                        "Age: ": 14,
+                        "Score: ": -1.5
+                    },
+                    "player_2": {
+                        "Nom: ": "f",
+                        "Prenom: ": "f",
+                        "Age: ": 15,
+                        "Score: ": 0
+                    }
+                },
+                {
+                    "player_1": {
+                        "Nom: ": "b",
+                        "Prenom: ": "b",
+                        "Age: ": 11,
+                        "Score: ": -1
+                    },
+                    "player_2": {
+                        "Nom: ": "BOT",
+                        "Prenom: ": "",
+                        "Age: ": 0,
+                        "Score: ": 0
+                    }
+                }
+            ]
+        },
+        {
+            "Roundmatchs": [
+                {
+                    "player_1": {
+                        "Nom: ": "a",
+                        "Prenom: ": "a",
+                        "Age: ": 10,
+                        "Score: ": 3
+                    },
+                    "player_2": {
+                        "Nom: ": "f",
+                        "Prenom: ": "f",
+                        "Age: ": 15,
+                        "Score: ": 0
+                    }
+                },
+                {
+                    "player_1": {
+                        "Nom: ": "d",
+                        "Prenom: ": "d",
+                        "Age: ": 13,
+                        "Score: ": 0.5
+                    },
+                    "player_2": {
+                        "Nom: ": "e",
+                        "Prenom: ": "e",
+                        "Age: ": 14,
+                        "Score: ": -1.5
+                    }
+                },
+                {
+                    "player_1": {
+                        "Nom: ": "b",
+                        "Prenom: ": "b",
+                        "Age: ": 11,
+                        "Score: ": -1
+                    },
+                    "player_2": {
+                        "Nom: ": "BOT",
+                        "Prenom: ": "",
+                        "Age: ": 0,
+                        "Score: ": 0
+                    }
+                }
+            ]
+        }
+    ]
+}

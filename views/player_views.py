@@ -22,7 +22,7 @@ def PlayersForCompetition():
         
     players_data = []
     for player in players:
-        print(f"{player.lastname} "
+        print(f"{player.lastname} " 
               f"{player.firstname} "
               f"{player.age} "
             )

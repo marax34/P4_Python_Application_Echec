@@ -1,10 +1,14 @@
+import os
+import json
+import random
+
 class Tournament:
     def __init__(self, name, 
                 place, 
                 start, 
                 end, 
-                round_number,
                 players,
+                players_ranking,
                 number_of_rounds=4
                 ):
         
@@ -12,11 +16,38 @@ class Tournament:
         self.place = place
         self.start = start
         self.end = end
-        self.round_number = round_number
+        self.round_number = 1
         self.players = players
+        self.players_ranking = players_ranking
         self.number_of_rounds = number_of_rounds
         self.rounds = []
         
+    def next_round(self):
+        self.round_number += 1 
+        
+    def shuffle_players(self):
+        random.shuffle(self.players_ranking)
+        
+    def to_json(self):
+        tournament_info = {
+            "Nom": self.name,
+            "Lieu du tournoi": self.place,
+            "Debut du tournoi": self.start,
+            "Fin du tournoi": self.end,
+            "Round en cours": self.round_number,
+            "Nombre de rounds": self.number_of_rounds,
+            "Joueurs inscrits": [player.to_json() for player in self.players],
+            "Classement des joueurs": [player.to_json() for player in self.players_ranking],
+            "Rounds Infos": [round.to_json() for round in self.rounds]            
+        }  
+        return tournament_info
+        
+    def save_to_json(self, file_name):
+        if not os.path.exists("./tournois"):
+            os.makedirs("./tournois")
+            
+        with open(file_name, 'w') as json_file:
+            json.dump(self.to_json(), json_file, indent=4)
         
     
     def __str__(self):

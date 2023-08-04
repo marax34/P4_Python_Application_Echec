@@ -14,6 +14,15 @@ class Player:
     def draw(self):
         self.score += 0.5
         
+    def to_json(self):
+        player_info = {
+            "Nom: ": self.lastname,
+            "Prenom: ": self.firstname,
+            "Age: ": self.age,
+            "Score: ": self.score          
+        }
+        return player_info
+        
     def __str__(self):
         return f"Nom: {self.lastname}\nPrenom: {self.firstname}\nAge: {self.age}\nScore: {self.score}"
         

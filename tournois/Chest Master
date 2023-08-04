@@ -1,0 +1,73 @@
+{
+    "Nom": "Chest Master",
+    "Lieu du tournoi": "Lyon",
+    "Debut du tournoi": "31/08/2023",
+    "Fin du tournoi": "05/09/2023",
+    "Round en cours": 1,
+    "Nombre de rounds": 3,
+    "Joueurs inscrits": [
+        {
+            "Nom: ": "a",
+            "Prenom: ": "a",
+            "Age: ": 10,
+            "Score: ": 0
+        },
+        {
+            "Nom: ": "b",
+            "Prenom: ": "b",
+            "Age: ": 11,
+            "Score: ": 0
+        },
+        {
+            "Nom: ": "c",
+            "Prenom: ": "c",
+            "Age: ": 12,
+            "Score: ": 0
+        },
+        {
+            "Nom: ": "d",
+            "Prenom: ": "d",
+            "Age: ": 13,
+            "Score: ": 0
+        },
+        {
+            "Nom: ": "e",
+            "Prenom: ": "e",
+            "Age: ": 14,
+            "Score: ": 0
+        }
+    ],
+    "Classement des joueurs": [
+        {
+            "Nom: ": "d",
+            "Prenom: ": "d",
+            "Age: ": 13,
+            "Score: ": 0
+        },
+        {
+            "Nom: ": "e",
+            "Prenom: ": "e",
+            "Age: ": 14,
+            "Score: ": 0
+        },
+        {
+            "Nom: ": "a",
+            "Prenom: ": "a",
+            "Age: ": 10,
+            "Score: ": 0
+        },
+        {
+            "Nom: ": "c",
+            "Prenom: ": "c",
+            "Age: ": 12,
+            "Score: ": 0
+        },
+        {
+            "Nom: ": "b",
+            "Prenom: ": "b",
+            "Age: ": 11,
+            "Score: ": 0
+        }
+    ],
+    "Rounds Infos": []
+}
