@@ -57,15 +57,17 @@ def create_tournament():
     return(tournament)
 
 def play_tournament(tournament):
-    for round_num in range(tournament.current_round, tournament.number_of_rounds):
-        tournament.current_round = round_num
+    print(tournament.number_of_rounds)
+    for round_num in range(tournament.current_round, (tournament.number_of_rounds) + 1):
+        tournament.current_round = round_num 
         print(f"Début du round {tournament.current_round}: ")
         round = Round(tournament.players_ranking)
         round.generate_games()
         round.play_games()
         tournament.players_ranking.sort(key= lambda player: (player.score), reverse = True)
         tournament.rounds.append(round)
-        tournament.next_round()
+        if tournament.current_round != tournament.number_of_rounds + 1:
+            tournament.next_round()
         tournament.save_to_json(f"./tournois/{tournament.name}")
 
 """tournament = create_tournament()

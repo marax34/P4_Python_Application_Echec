@@ -44,12 +44,12 @@ def load_tournament(file_path):
                 player = Player(player_data["Nom"], player_data["Prenom"], player_data["Age"])
                 player.score = player_data["Score"]
                 players_ranking.append(player)
+            round = Round(players_ranking)
             
             rounds_data = data["Rounds Infos"]
             rounds = []
             for round_data in rounds_data:
                 round_info = round_data["Round"]
-                round_games = []
                 for game_data in round_info:
                     player_1_data = game_data["player_1"]
                     player_2_data = game_data["player_2"]
@@ -57,9 +57,7 @@ def load_tournament(file_path):
                     player_1.score = player_1_data["Score"]
                     player_2 = Player(player_2_data["Nom"], player_2_data["Prenom"], player_2_data["Age"])
                     player_2.score = player_2_data["Score"]
-                    round_games.append((player_1, player_2))
-                    round = Round(players_ranking)
-                    round.games.append(round_games)
+                    round.games.append((player_1, player_2))
                 rounds.append(round)
                             
             tournament = Tournament(name, place, start, end, players, players_ranking, number_of_rounds)
