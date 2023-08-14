@@ -46,7 +46,10 @@ class Round:
         # Convert round information to a dictionary
         round_info = {
             f"Round": [
-                game.to_json()
+                {
+                "player_1": game[0].to_json(),
+                "player_2": game[1].to_json(),
+                }
                 for game in self.games
             ]
         }
