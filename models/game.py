@@ -3,6 +3,12 @@ class Game:
         self.player_1 = player_1
         self.player_2 = player_2
         
+    def to_json(self):
+        return {
+            "player_1": self.player_1.to_json(),
+            "player_2": self.player_2.to_json(),
+        }
+        
     def play(self):
         if self.player_1.lastname == "BOT" or self.player_2.lastname == "BOT":
             return
