@@ -4,6 +4,11 @@ class Player:
         self.firstname = firstname
         self.age = int(age)
         self.score = score
+        self.index = None
+        self.played_against = []
+        
+    def set_index(self, index):
+        self.index = index
         
     def win_game(self):
         self.score += 1
@@ -16,13 +21,16 @@ class Player:
         
     def to_json(self):
         player_info = {
-            "Nom: ": self.lastname,
-            "Prenom: ": self.firstname,
-            "Age: ": self.age,
-            "Score: ": self.score          
+            "Nom": self.lastname,
+            "Prenom": self.firstname,
+            "Age": self.age,
+            "Score": self.score          
         }
         return player_info
         
     def __str__(self):
-        return f"Nom: {self.lastname}\nPrenom: {self.firstname}\nAge: {self.age}\nScore: {self.score}"
+        if self.index is not None:
+            return f"{self.index}. {self.firstname} {self.lastname} ({self.age} ans)"
+        else:
+            return f"{self.firstname} {self.lastname} ({self.age} ans)"
         

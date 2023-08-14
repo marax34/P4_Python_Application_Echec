@@ -5,7 +5,7 @@ sys.path.append("./")
 from models.player import Player
 from controllers.json_function import writeJson
 
-def PlayersForCompetition():
+def players_for_competition():
     """
     Function to add all the players from club at competition list of players.
     """
@@ -36,8 +36,6 @@ def PlayersForCompetition():
     print(players_data)
     
     writeJson("./competition", "./competition/players.json", players_data)
-    
-PlayersForCompetition()
-    
+       
     
     

@@ -27,6 +27,7 @@ def select_players():
         for player in data:
             if player_lastname.lower() == player["Nom"] and player_firstname.lower() == player["Prenom"]:
                 player = Player(player["Nom"], player["Prenom"], player["Age"])
+                player.set_index(i)
                 players.append(player)
                 print(f"Joueur {i}  inscrit:\n{player}")
                 player_found = True
@@ -55,10 +56,24 @@ def create_tournament():
     tournament = Tournament(name, place, start, end, players, players_ranking, number_of_rounds)
     return(tournament)
 
-tournament = create_tournament()
+def play_tournament(tournament):
+    for round_num in range(tournament.current_round, tournament.number_of_rounds):
+        tournament.current_round = round_num
+        print(f"Début du round {tournament.current_round}: ")
+        round = Round(tournament.players_ranking)
+        round.generate_games()
+        round.play_games()
+        tournament.players_ranking.sort(key= lambda player: (player.score), reverse = True)
+        tournament.rounds.append(round)
+        tournament.next_round()
+        tournament.save_to_json(f"./tournois/{tournament.name}")
+
+"""tournament = create_tournament()
+for player in tournament.players:
+    print(player)
 tournament.save_to_json(f"./tournois/{tournament.name}")
 tournament.shuffle_players()
-print(f" Début du Round {tournament.round_number}: ")
+print(f" Début du Round {tournament.current_round}: ")
 for round in range(tournament.number_of_rounds):
     round = Round(tournament.players_ranking)
     round.generate_games()
@@ -66,6 +81,5 @@ for round in range(tournament.number_of_rounds):
     tournament.players_ranking.sort(key= lambda player: (player.score), reverse = True)
     tournament.rounds.append(round)
     tournament.save_to_json(f"./tournois/{tournament.name}")
-    time.sleep(2)
-
+    time.sleep(2)"""
 
