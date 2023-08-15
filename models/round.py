@@ -1,10 +1,15 @@
 from models.game import Game
 from models.player import Player
+from models.tournament import Tournament
 
 class Round:
     def __init__(self, players):
         self.players = players
         self.games = []
+        self.current_game = 0
+        
+    def next_game(self):
+        self.current_game += 1
         
     def generate_games(self):
          
@@ -19,7 +24,7 @@ class Round:
             
             player_2 = None
             for player in remainining_players:
-                if player not in player_1.played_against:
+                if player.index not in player_1.played_against:
                     player_2 = player
                     break
                 
@@ -27,31 +32,41 @@ class Round:
                 break
             
             remainining_players.remove(player_2)
-            player_1.played_against.append(player_2)
-            player_2.played_against.append(player_1)
-            self.games.append((player_1, player_2))
+            player_1.played_against.append(player_2.index)
+            player_2.played_against.append(player_1.index)
+            game = Game(player_1, player_2)
+            self.games.append(game)
+            #self.games.append((player_1, player_2))
             
         if num_players % 2 != 0:
             self.players.pop()
             
     def play_games(self):
-        for player_1, player_2 in self.games:
+        total_games = len(self.games) 
+        for i in range(self.current_game, (total_games)):
+            game = self.games[i]
+            player_1, player_2 = game.player_1, game.player_2
+            if player_1.lastname != "BOT" and player_2.lastname != "BOT":
+                print(f"Match en cours : {player_1.lastname} VS {player_2.lastname}")
+            else:
+                print(f"{player_1.lastname} n'a pas d'adversaire il ne marque ni ne gagne de point")
+            self.games[i].play()
+            self.next_game()
+        """for player_1, player_2 in self.games:
             game = Game(player_1, player_2)
             if player_1.lastname != "BOT" and player_2.lastname != "BOT":
                 print(f"Match en cours : {player_1.lastname} VS {player_2.lastname}")
-            game.play()
+            game.play()"""
             
             
     def to_json(self):
         # Convert round information to a dictionary
         round_info = {
             f"Round": [
-                {
-                "player_1": game[0].to_json(),
-                "player_2": game[1].to_json(),
-                }
+                game.to_json()
                 for game in self.games
-            ]
+            ],
+            #"Match en cours": self.current_game
         }
         return round_info
     

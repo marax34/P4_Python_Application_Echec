@@ -6,6 +6,7 @@ from models.tournament import Tournament
 from models.player import Player
 from models.game import Game
 from models.round import Round
+from controllers import tournament_controllers
 import player_views
 import tournament_views 
 import time
@@ -27,17 +28,17 @@ def main_menu():
             tournament = tournament_views.create_tournament()
             for player in tournament.players:
                 print(player)
-            tournament.save_to_json(f"./tournois/{tournament.name}")
             tournament.shuffle_players()
+            tournament.save_to_json(f"./tournois/{tournament.name}")
             print("Le tournoi à été crée avec succés")
             start_or_pass = input("Si vous souhaitez démarrer le tournoi tapez 1 entrer une touche: ")
             if start_or_pass == "1":
-                tournament_views.play_tournament(tournament)
+                tournament_controllers.play_tournament(tournament)
         elif choice == "3":
             tournament_name = input("Entrer le nom du tournoi à reprendre: ")
             tournament = load_tournament(f"./tournois/{tournament_name}")
             if tournament is not None:
-                tournament_views.play_tournament(tournament)
+                tournament_controllers.play_tournament(tournament)
             else:
                 print("Tournoi non trouvé")
         elif choice == "4":

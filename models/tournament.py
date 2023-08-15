@@ -23,7 +23,7 @@ class Tournament:
         self.rounds = []
         
     def next_round(self):
-        self.current_round += 1 
+        self.current_round += 1
         
     def shuffle_players(self):
         random.shuffle(self.players_ranking)
@@ -46,7 +46,6 @@ class Tournament:
         if not os.path.exists("./tournois"):
             os.makedirs("./tournois")
             
-        print(self)
         
         with open(file_name, 'w') as json_file:
             json.dump(self.to_json(), json_file, indent=4)

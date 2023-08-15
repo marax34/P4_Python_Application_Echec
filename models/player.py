@@ -24,7 +24,12 @@ class Player:
             "Nom": self.lastname,
             "Prenom": self.firstname,
             "Age": self.age,
-            "Score": self.score          
+            "Score": self.score,
+            "Index": self.index,
+            "Joueurs affrontes": [
+                i
+                for i in self.played_against 
+                ]         
         }
         return player_info
         

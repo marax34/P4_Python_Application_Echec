@@ -29,6 +29,7 @@ def load_tournament(file_path):
             start = data["Debut du tournoi"]
             end = data["Fin du tournoi"]
             round_in_progress = data["Round en cours"]
+            #game_in_progress = data["Match en cours"]
             number_of_rounds = data["Nombre de rounds"]
             
             players_data = data["Joueurs inscrits"]
@@ -43,6 +44,8 @@ def load_tournament(file_path):
             for player_data in players_ranking_data:
                 player = Player(player_data["Nom"], player_data["Prenom"], player_data["Age"])
                 player.score = player_data["Score"]
+                player.index = player_data["Index"]
+                #player.played_against = player_data["Joueurs affrontés"]
                 players_ranking.append(player)
             round = Round(players_ranking)
             
@@ -57,13 +60,15 @@ def load_tournament(file_path):
                     player_1.score = player_1_data["Score"]
                     player_2 = Player(player_2_data["Nom"], player_2_data["Prenom"], player_2_data["Age"])
                     player_2.score = player_2_data["Score"]
-                    round.games.append((player_1, player_2))
+                    #round.games.append((player_1, player_2))
+                    game = Game(player_1, player_2)
+                    round.games.append(game)
+                #round.current_game = game_in_progress
                 rounds.append(round)
                             
             tournament = Tournament(name, place, start, end, players, players_ranking, number_of_rounds)
             tournament.current_round = round_in_progress
             tournament.rounds = rounds
-            print(tournament.rounds)
             return tournament
             
     except FileNotFoundError:
