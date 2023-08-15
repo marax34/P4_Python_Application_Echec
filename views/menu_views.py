@@ -2,8 +2,10 @@ from controllers.json_function import load_tournament
 from controllers import tournament_controllers
 from views import player_views
 from views import tournament_views
+from cyberbrain import trace
 
 
+@trace
 def main_menu():
     x = 0
     while x == 0:
