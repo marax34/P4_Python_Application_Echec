@@ -94,6 +94,7 @@ def load_tournament(file_path):
         print(f"Erreur de décodage JSON pour le fichier {file_path}.")
         return None
 
+
 def load_winner(file_path):
     try:
         with open(file_path, "r") as json_file:

@@ -23,7 +23,7 @@ def play_tournament(tournament):
         if tournament.current_round == tournament.number_of_rounds + 1:
             load_winner(f"./tournois/{tournament.name}")
             print("Tournoi terminé")
-            time(2)
+            time.sleep(2)
             sys.exit()
         else:
             continue_or_quit()

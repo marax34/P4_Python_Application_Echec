@@ -25,7 +25,7 @@ def main_menu():
             tournament.shuffle_players()
             tournament.save_to_json(f"./tournois/{tournament.name}")
             print("Le tournoi à été crée avec succés")
-            start_or_pass = input("Si vous souhaitez démarrer le tournoi"
+            start_or_pass = input("Si vous souhaitez démarrer le tournoi "
                                   "tapez 1 sinon entrer une touche: ")
             if start_or_pass == "1":
                 tournament_controllers.play_tournament(tournament)
