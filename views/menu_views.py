@@ -1,15 +1,8 @@
-import json
-import sys
-sys.path.append('./')
 from controllers.json_function import load_tournament
-from models.tournament import Tournament
-from models.player import Player
-from models.game import Game
-from models.round import Round
 from controllers import tournament_controllers
-import player_views
-import tournament_views 
-import time
+from views import player_views
+from views import tournament_views
+
 
 def main_menu():
     x = 0
@@ -19,9 +12,10 @@ def main_menu():
         print("2. Créer un nouveau tournoi")
         print("3. Reprendre un tournoi en cours")
         print("4. Quitter")
-        
-        choice = input("Choisissez un des options parmi les suivantes(1,2,3,4): ")
-        
+
+        choice = input("Choisissez un des options parmi"
+                       "les suivantes(1,2,3,4): ")
+
         if choice == "1":
             player_views.players_for_competition()
         elif choice == "2":
@@ -31,7 +25,8 @@ def main_menu():
             tournament.shuffle_players()
             tournament.save_to_json(f"./tournois/{tournament.name}")
             print("Le tournoi à été crée avec succés")
-            start_or_pass = input("Si vous souhaitez démarrer le tournoi tapez 1 entrer une touche: ")
+            start_or_pass = input("Si vous souhaitez démarrer le tournoi"
+                                  "tapez 1 sinon entrer une touche: ")
             if start_or_pass == "1":
                 tournament_controllers.play_tournament(tournament)
         elif choice == "3":
@@ -46,5 +41,3 @@ def main_menu():
             x = 1
         else:
             print("Option invalide veuillez choisir entre 1, 2, 3 ou 4")
-                
-main_menu()

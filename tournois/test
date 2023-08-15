@@ -3,14 +3,14 @@
     "Lieu du tournoi": "lyon",
     "Debut du tournoi": "15/08",
     "Fin du tournoi": "16/08",
-    "Round en cours": 3,
+    "Round en cours": 5,
     "Nombre de rounds": 4,
     "Joueurs inscrits": [
         {
             "Nom": "a",
             "Prenom": "a",
             "Age": 1,
-            "Score": 1,
+            "Score": -1,
             "Index": null,
             "Joueurs affrontes": []
         },
@@ -18,7 +18,7 @@
             "Nom": "b",
             "Prenom": "b",
             "Age": 2,
-            "Score": -1,
+            "Score": 1,
             "Index": null,
             "Joueurs affrontes": []
         },
@@ -26,7 +26,7 @@
             "Nom": "c",
             "Prenom": "c",
             "Age": 3,
-            "Score": -1,
+            "Score": 0,
             "Index": null,
             "Joueurs affrontes": []
         },
@@ -34,7 +34,7 @@
             "Nom": "d",
             "Prenom": "d",
             "Age": 4,
-            "Score": 0,
+            "Score": -1,
             "Index": null,
             "Joueurs affrontes": []
         },
@@ -49,32 +49,14 @@
     ],
     "Classement des joueurs": [
         {
-            "Nom": "a",
-            "Prenom": "a",
-            "Age": 1,
-            "Score": 2,
-            "Index": 1,
-            "Joueurs affrontes": [
-                5
-            ]
-        },
-        {
-            "Nom": "d",
-            "Prenom": "d",
-            "Age": 4,
-            "Score": 1,
-            "Index": 4,
-            "Joueurs affrontes": [
-                3
-            ]
-        },
-        {
             "Nom": "e",
             "Prenom": "e",
             "Age": 5,
-            "Score": 0,
+            "Score": 4,
             "Index": 5,
             "Joueurs affrontes": [
+                2,
+                3,
                 1
             ]
         },
@@ -82,44 +64,53 @@
             "Nom": "b",
             "Prenom": "b",
             "Age": 2,
-            "Score": -1,
+            "Score": 2,
             "Index": 2,
             "Joueurs affrontes": [
-                null
+                5,
+                1,
+                3
             ]
         },
         {
             "Nom": "c",
             "Prenom": "c",
             "Age": 3,
-            "Score": -2,
+            "Score": -1,
             "Index": 3,
             "Joueurs affrontes": [
-                4
+                4,
+                5,
+                2
+            ]
+        },
+        {
+            "Nom": "d",
+            "Prenom": "d",
+            "Age": 4,
+            "Score": -2,
+            "Index": 4,
+            "Joueurs affrontes": [
+                3,
+                null
+            ]
+        },
+        {
+            "Nom": "a",
+            "Prenom": "a",
+            "Age": 1,
+            "Score": -3,
+            "Index": 1,
+            "Joueurs affrontes": [
+                null,
+                2,
+                5
             ]
         }
     ],
     "Rounds Infos": [
         {
             "Round": [
-                {
-                    "player_1": {
-                        "Nom": "a",
-                        "Prenom": "a",
-                        "Age": 1,
-                        "Score": 1,
-                        "Index": null,
-                        "Joueurs affrontes": []
-                    },
-                    "player_2": {
-                        "Nom": "c",
-                        "Prenom": "c",
-                        "Age": 3,
-                        "Score": -1,
-                        "Index": null,
-                        "Joueurs affrontes": []
-                    }
-                },
                 {
                     "player_1": {
                         "Nom": "e",
@@ -130,9 +121,9 @@
                         "Joueurs affrontes": []
                     },
                     "player_2": {
-                        "Nom": "b",
-                        "Prenom": "b",
-                        "Age": 2,
+                        "Nom": "d",
+                        "Prenom": "d",
+                        "Age": 4,
                         "Score": -1,
                         "Index": null,
                         "Joueurs affrontes": []
@@ -140,9 +131,27 @@
                 },
                 {
                     "player_1": {
-                        "Nom": "d",
-                        "Prenom": "d",
-                        "Age": 4,
+                        "Nom": "b",
+                        "Prenom": "b",
+                        "Age": 2,
+                        "Score": 1,
+                        "Index": null,
+                        "Joueurs affrontes": []
+                    },
+                    "player_2": {
+                        "Nom": "a",
+                        "Prenom": "a",
+                        "Age": 1,
+                        "Score": -1,
+                        "Index": null,
+                        "Joueurs affrontes": []
+                    }
+                },
+                {
+                    "player_1": {
+                        "Nom": "c",
+                        "Prenom": "c",
+                        "Age": 3,
                         "Score": 0,
                         "Index": null,
                         "Joueurs affrontes": []
@@ -162,45 +171,106 @@
             "Round": [
                 {
                     "player_1": {
-                        "Nom": "a",
-                        "Prenom": "a",
-                        "Age": 1,
-                        "Score": 2,
-                        "Index": 1,
-                        "Joueurs affrontes": [
-                            5
-                        ]
-                    },
-                    "player_2": {
                         "Nom": "e",
                         "Prenom": "e",
                         "Age": 5,
-                        "Score": 0,
+                        "Score": 4,
                         "Index": 5,
                         "Joueurs affrontes": [
+                            2,
+                            3,
                             1
+                        ]
+                    },
+                    "player_2": {
+                        "Nom": "b",
+                        "Prenom": "b",
+                        "Age": 2,
+                        "Score": 2,
+                        "Index": 2,
+                        "Joueurs affrontes": [
+                            5,
+                            1,
+                            3
                         ]
                     }
                 },
                 {
                     "player_1": {
+                        "Nom": "c",
+                        "Prenom": "c",
+                        "Age": 3,
+                        "Score": -1,
+                        "Index": 3,
+                        "Joueurs affrontes": [
+                            4,
+                            5,
+                            2
+                        ]
+                    },
+                    "player_2": {
                         "Nom": "d",
                         "Prenom": "d",
                         "Age": 4,
-                        "Score": 1,
+                        "Score": -2,
                         "Index": 4,
                         "Joueurs affrontes": [
-                            3
+                            3,
+                            null
+                        ]
+                    }
+                },
+                {
+                    "player_1": {
+                        "Nom": "a",
+                        "Prenom": "a",
+                        "Age": 1,
+                        "Score": -3,
+                        "Index": 1,
+                        "Joueurs affrontes": [
+                            null,
+                            2,
+                            5
+                        ]
+                    },
+                    "player_2": {
+                        "Nom": "BOT",
+                        "Prenom": "",
+                        "Age": 0,
+                        "Score": 0,
+                        "Index": null,
+                        "Joueurs affrontes": [
+                            1
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "Round": [
+                {
+                    "player_1": {
+                        "Nom": "e",
+                        "Prenom": "e",
+                        "Age": 5,
+                        "Score": 4,
+                        "Index": 5,
+                        "Joueurs affrontes": [
+                            2,
+                            3,
+                            1
                         ]
                     },
                     "player_2": {
                         "Nom": "c",
                         "Prenom": "c",
                         "Age": 3,
-                        "Score": -2,
+                        "Score": -1,
                         "Index": 3,
                         "Joueurs affrontes": [
-                            4
+                            4,
+                            5,
+                            2
                         ]
                     }
                 },
@@ -209,9 +279,36 @@
                         "Nom": "b",
                         "Prenom": "b",
                         "Age": 2,
-                        "Score": -1,
+                        "Score": 2,
                         "Index": 2,
                         "Joueurs affrontes": [
+                            5,
+                            1,
+                            3
+                        ]
+                    },
+                    "player_2": {
+                        "Nom": "a",
+                        "Prenom": "a",
+                        "Age": 1,
+                        "Score": -3,
+                        "Index": 1,
+                        "Joueurs affrontes": [
+                            null,
+                            2,
+                            5
+                        ]
+                    }
+                },
+                {
+                    "player_1": {
+                        "Nom": "d",
+                        "Prenom": "d",
+                        "Age": 4,
+                        "Score": -2,
+                        "Index": 4,
+                        "Joueurs affrontes": [
+                            3,
                             null
                         ]
                     },
@@ -222,6 +319,62 @@
                         "Score": 0,
                         "Index": null,
                         "Joueurs affrontes": [
+                            4
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "Round": [
+                {
+                    "player_1": {
+                        "Nom": "e",
+                        "Prenom": "e",
+                        "Age": 5,
+                        "Score": 4,
+                        "Index": 5,
+                        "Joueurs affrontes": [
+                            2,
+                            3,
+                            1
+                        ]
+                    },
+                    "player_2": {
+                        "Nom": "a",
+                        "Prenom": "a",
+                        "Age": 1,
+                        "Score": -3,
+                        "Index": 1,
+                        "Joueurs affrontes": [
+                            null,
+                            2,
+                            5
+                        ]
+                    }
+                },
+                {
+                    "player_1": {
+                        "Nom": "b",
+                        "Prenom": "b",
+                        "Age": 2,
+                        "Score": 2,
+                        "Index": 2,
+                        "Joueurs affrontes": [
+                            5,
+                            1,
+                            3
+                        ]
+                    },
+                    "player_2": {
+                        "Nom": "c",
+                        "Prenom": "c",
+                        "Age": 3,
+                        "Score": -1,
+                        "Index": 3,
+                        "Joueurs affrontes": [
+                            4,
+                            5,
                             2
                         ]
                     }

@@ -1,6 +1,6 @@
 from models.game import Game
 from models.player import Player
-from models.tournament import Tournament
+
 
 class Round:
     def __init__(self, players):

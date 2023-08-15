@@ -1,12 +1,6 @@
-import sys
-import json
-import os
-sys.path.append("./")
 from models.player import Player
 from controllers.json_function import writeJson
 from controllers import regex_validation
-
-
 
 
 def players_for_competition():
@@ -15,11 +9,17 @@ def players_for_competition():
     """
     players = []
     print("Merci d'inscrire les joueurs à la compétition annuelle:")
-    number_of_players = int(input("Combien de joueurs souhaitez-vous inscrire ? "))
+    number_of_players = int(input(
+        "Combien de joueurs souhaitez-vous inscrire ? "
+        ))
     i = 1
-    while i <= number_of_players:  
-        lastname = regex_validation.is_name_valid("Entrer le nom du joueur: ")
-        firstname = regex_validation.is_name_valid("Entrer le prénom du joueur: ")
+    while i <= number_of_players:
+        lastname = regex_validation.is_name_valid(
+            "Entrer le nom du joueur: "
+            )
+        firstname = regex_validation.is_name_valid(
+            "Entrer le prénom du joueur: "
+            )
         while True:
             age = input("Entrer l'age du joueur: ")
             if not age.isdigit():
@@ -27,7 +27,7 @@ def players_for_competition():
             else:
                 break
         player = Player(lastname, firstname, age)
-        
+
         player_exists = any(
             registered.lastname.lower() == player.lastname.lower()
             and registered.firstname.lower() == player.firstname.lower()
@@ -40,10 +40,9 @@ def players_for_competition():
             player.set_index(i)
             players.append(player)
             print(f"Joueur {i} inscrit:\n{player}")
-            players.sort(key=lambda player: (player.lastname, player.firstname))
-            i+=1
-    
-    writeJson("./competition", "./competition/players.json", [player.to_json() for player in players])
-       
-    
-    
+            players.sort(key=lambda player:
+                         (player.lastname, player.firstname))
+            i += 1
+
+    writeJson("./competition", "./competition/players.json",
+              [player.to_json() for player in players])

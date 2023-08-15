@@ -1,8 +1,10 @@
 import re
 
+
 def validate_name(name):
     pattern = r"^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$"
     return re.match(pattern, name)
+
 
 def is_name_valid(element):
     while True:
@@ -12,9 +14,11 @@ def is_name_valid(element):
         else:
             return name
 
+
 def validate_date(date):
     pattern = r"^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])(?:/[0-9]{4})?$"
     return re.match(pattern, date)
+
 
 def is_date_valid(element):
     while True:
@@ -23,4 +27,3 @@ def is_date_valid(element):
             print("Merci d'entrer la date sur le format jj/mm ou jj/mm/aaaa")
         else:
             return date
-

@@ -1,13 +1,9 @@
-import json
-import sys
-sys.path.append('./')
 from controllers.json_function import loadJson
 from models.tournament import Tournament
 from models.player import Player
-from models.game import Game
-from models.round import Round
 from controllers import regex_validation
-import time
+import sys
+
 
 def select_players():
     """
